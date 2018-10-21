@@ -10,7 +10,7 @@ import Rank from './components/Rank/Rank.js';
 import 'tachyons';
 import './App.css';
 
-
+// Uploaded on a Heroku server //
 const particlesOptions = {
   particles: {
     number: {
