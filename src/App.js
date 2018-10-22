@@ -26,7 +26,7 @@ const particlesOptions = {
 const initialState = {
   input: '',
   imageurl: '',
-  box: [],
+  box: {},
   route: 'signin',
   isSignedIn: false,
   user: {
@@ -69,6 +69,7 @@ calculateFaceLocation = (data) => {
 
 
 displayFaceBox = (box) => {
+console.log(box);
   this.setState({box:box});
 }
 
@@ -93,12 +94,12 @@ onButtonSubmit = () => {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
              id:this.state.user.id
-})
-})
+              })
+            })
         .then(response => response.json())
         .then(count => {
           this.setState(Object.assign(this.state.user, { entries: count }))
-})
+          })
           .catch(console.log)
         }
       this.displayFaceBox(this.calculateFaceLocation(response))
@@ -121,7 +122,8 @@ onRouteChange = (route) => {
     return (
       <div className="App">
          <Particles className='particles'
-         params={particlesOptions}/>
+         params={particlesOptions}
+          />
          <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
         {route === 'home'
          ? <div>
