@@ -5,8 +5,7 @@
 *OPTIONAL* if you wanna preview the app click this link and wait for it to load :)
 https://mysmartbrain.herokuapp.com/
 
-This link is for the BETA version (still under work)
-https://smartestbrain.herokuapp.com/
+
 
 
 
